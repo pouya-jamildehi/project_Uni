@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+
+</head>
+<body>
+<H1 style="text-align: center;position: center;background-color: chartreuse">ADD WALL</H1>
+<div class="formbox">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="{{ add_wall_form.owner.id_for_label }}">{{ add_wall_form.owner.label }}</label>
+    {{ add_wall_form.owner }}
+    {#            {% for error in add_wall_form.owner.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_wall_form.location.id_for_label }}">{{ add_wall_form.location.label }}</label>
+    {{ add_wall_form.location }}
+    {#            {% for error in add_wall_form.location.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_wall_form.start_date.id_for_label }}">{{ add_wall_form.start_date.label }}</label>
+    {{ add_wall_form.start_date }}
+    {#            {% for error in add_wall_form.start_date.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_wall_form.end_date.id_for_label }}">{{ add_wall_form.end_date.label }}</label>
+    {{ add_wall_form.end_date }}
+    {#            {% for error in add_wall_form.end_date.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_wall_form.space_count.id_for_label }}">{{ add_wall_form.space_count.label }}</label>
+    {{ add_wall_form.space_count }}
+    {#            {% for error in add_wall_form.space_count.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+{#    <label for="{{ add_wall_form.image.id_for_label }}">{{ add_wall_form.image.label }}</label>#}
+{#    {{ add_wall_form.image }}#}
+    {#            {% for error in add_wall_form.image.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_wall_form.price.id_for_label }}">{{ add_wall_form.price.label }}</label>
+    {{ add_wall_form.price }}
+    {#            {% for error in add_wall_form.price.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+
+    <input type="submit" value="send">
+</form>
+    </div>
+<a href="\">Home</a>
+</body>
+</html>
+<style>
+    .formbox {
+        border-radius: 10px;
+        width: 455px;
+        background-color: antiquewhite;
+        padding: 20px;
+        margin: auto;
+        margin-top: 20px;
+        -webkit-box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.53);
+        box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.53);
+    }
+
+    body {
+        font-family: 'Shabnam', sans-serif;
+    }
+
+
+</style>

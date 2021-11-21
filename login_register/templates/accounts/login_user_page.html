@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="formbox">
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ login_form.username.id_for_label }}">{{ login_form.username.label }}</label>
+        {{ login_form.username.username }}
+        {% for error in login_form.username.errors %}
+            <p style="color: red;">{{ error }}</p>
+        {% endfor %}
+    <label for="{{ login_form.password.id_for_label }}">{{ login_form.password.label }}</label>
+        {{ login_form.username.password }}
+        {% for error in login_form.password.errors %}
+            <p style="color: red;">{{ error }}</p>
+        {% endfor %}
+     <input type="submit" value="send">
+    </form>
+</div>
+</body>
+</html>
+<style>
+    .formbox {
+        border-radius: 10px;
+        width: 455px;
+        background-color: antiquewhite;
+        padding: 20px;
+        margin: auto;
+        margin-top: 20px;
+        -webkit-box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.53);
+        box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.53);
+    }
+
+    body {
+        font-family: 'Shabnam', sans-serif;
+    }
+
+
+</style>

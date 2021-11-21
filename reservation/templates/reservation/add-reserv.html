@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<H1 style="text-align: center;position: center;background-color: cornflowerblue">ADD RESERVATION</H1>
+<div class="formbox">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="{{ add_reserv_form.title.id_for_label }}">{{ add_reserv_form.title.label }}</label>
+    {{ add_reserv_form.title }}
+    {#            {% for error in add_reserv_form.title.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.subject.id_for_label }}">{{ add_reserv_form.subject.label }}</label>
+    {{ add_reserv_form.subject }}
+    {#            {% for error in add_reserv_form.subject.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.start_date.id_for_label }}">{{ add_reserv_form.start_date.label }}</label>
+    {{ add_reserv_form.start_date }}
+    {#            {% for error in add_reserv_form.start_date.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.end_date.id_for_label }}">{{ add_reserv_form.end_date.label }}</label>
+    {{ add_reserv_form.end_date }}
+    {#            {% for error in add_reserv_form.end_date.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.about.id_for_label }}">{{ add_reserv_form.about.label }}</label>
+    {{ add_reserv_form.about }}
+    {#            {% for error in add_reserv_form.about.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.price.id_for_label }}">{{ add_reserv_form.price.label }}</label>
+    {{ add_reserv_form.price }}
+    {#            {% for error in add_reserv_form.price.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.art.id_for_label }}">{{ add_reserv_form.art.label }}</label>
+    {{ add_reserv_form.art }}
+    {#            {% for error in add_reserv_form.art.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+    <hr>
+    <label for="{{ add_reserv_form.wall.id_for_label }}">{{ add_reserv_form.wall.label }}</label>
+    {{ add_reserv_form.wall }}
+    {#            {% for error in add_reserv_form.wall.errors %}#}
+    {#                <p style="color: red;">{{ error }}</p>#}
+    {#            {% endfor %}#}
+
+        <input type="submit" value="send">
+    </form>
+
+    </div>
+<a href="\">Home</a>
+</body>
+</html>
+<style>
+    .formbox {
+        border-radius: 10px;
+        width: 455px;
+        background-color: darkgray;
+        padding: 20px;
+        margin: auto;
+        margin-top: 20px;
+        -webkit-box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.53);
+        box-shadow: -1px 2px 6px 1px rgba(0, 0, 0, 0.53);
+    }
+
+    body {
+        font-family: 'Shabnam', sans-serif;
+    }
+
+
+</style>
