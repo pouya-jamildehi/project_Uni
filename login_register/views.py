@@ -23,7 +23,7 @@ def login_user_page(request):
     context={
         'login_form':login_user_form
     }
-    return render(request, 'accounts/login_user_page.html', context)
+    return render(request, 'login_page.html', context)
 
 
 
@@ -44,4 +44,4 @@ def register_user_page(request):
     context ={
         'register_form':register_form
     }
-    return render(request, 'accounts/register_user_page.html', context)
+    return render(request, 'register_page.html', context)
