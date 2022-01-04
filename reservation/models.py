@@ -1,7 +1,10 @@
+from urllib import request
+
 from django.db import models
 import os
 from wall.models import Wall
 from art_artist.models import Art
+from django.contrib.auth.models import User
 import qrcode
 
 
@@ -45,6 +48,7 @@ class Reserv(models.Model):
     art = models.ManyToManyField(Art,verbose_name='انتخاب تصویر')
     wall = models.ManyToManyField(Wall,verbose_name='انتخاب دیوار')
     qrcode_image = models.ImageField(upload_to=upload_qrcode_image_path,null=True,blank=True,verbose_name='کداسکن')
+    creator_id = models.IntegerField(default=0,null=False, verbose_name='شناسه کاربر سازده')
 
     objects = ReservManager()
 
