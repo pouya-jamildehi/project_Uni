@@ -16,14 +16,14 @@ import qrcode
 #         return Reserv.objects.get_active_reserv()
 
 def reservation_detail(request,*args,**kwargs):
-
-    reservation = Reserv.objects.get_reserv_id(1)
-    if reservation is None :
-        raise Http404('محصول مورد نظر یاقت نشد')
-    wall = Art.objects.get_queryset().filter(reserv__art__reserv__id=2).distinct()
+    #به جای creator id باید از هیدی رزرو برای نشان دادن تابلوهای ان استفتده کنم
+    person_reservation = Reserv.objects.get_queryset().filter(creator_id=request.user.id)
+    if person_reservation is None:
+        raise Http404('هیچ رزروی برای این کاربر وجود ندارد')
+    reserv_details = Art.objects.get_queryset().filter(reserv__art__reserv__creator_id=request.user.id).distinct()
     context = {
-        'reservation': reservation,
-        'wall': wall,
+        'person_reservation': person_reservation,
+        'reserv_details': reserv_details,
     }
     return render(request,'reservation/reservation_pic.html',context)
 

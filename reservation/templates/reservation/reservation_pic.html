@@ -1,12 +1,12 @@
 {% extends 'shared/_Mainlayout.html' %}
 {% block content %}
-    {% for pic in wall %}
+    {% for items in reserv_details %}
         <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="{{pic.image.url}}" alt="...">
+      <img src="{{items.image.url}}" alt="...">
       <div class="caption">
-        <h3>{{ pic.title }}</h3>
+        <h3>{{ items.title }}</h3>
         <p>...</p>
         <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
       </div>
